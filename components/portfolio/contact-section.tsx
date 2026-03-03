@@ -31,6 +31,9 @@ export function ContactSection() {
             {"Let's connect!"}
           </h3>
           <p className="mt-4 text-muted-foreground leading-relaxed max-w-sm">
+            I live in New York City, NY, USA. Let's grab some coffee if you are
+            around here! <br />
+            <br />
             I'm always open to discussing new projects, creative ideas, or
             opportunities to be part of something great.
           </p>
