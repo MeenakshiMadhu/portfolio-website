@@ -123,7 +123,7 @@ export function ExperienceSection() {
         ))}
       </div>
       <a
-        href="/resume.pdf"
+        href="https://drive.google.com/file/d/1zTSm0ERilLESkIOZyEJxfd67zhTWzI3A/view?usp=sharing"
         className="group mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary"
       >
         View Full Resume
