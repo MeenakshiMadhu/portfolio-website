@@ -28,11 +28,13 @@ const skillCategories = [
     title: "Machine Learning & AI",
     icon: BrainCircuit, // BrainCircuit for ML & AI
     skills: [
+      "RAG",
+      "LLM Integration",
+      "Agentic AI",
       "Pandas",
       "NumPy",
       "Matplotlib",
       "Scikit-Learn",
-      "XGBoost",
       "TensorFlow",
       "PyTorch",
       "Keras",
