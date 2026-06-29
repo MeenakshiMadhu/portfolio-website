@@ -14,7 +14,7 @@ const socialLinks = [
   },
   {
     label: "Email",
-    href: "mailto:mm14029@nyu.edu",
+    href: "mailto:meenakshimadhu00@gmail.com",
     icon: Mail,
   },
 ];
@@ -63,7 +63,7 @@ export function HeroSection() {
               View My Work
             </a>
             <a
-              href="https://drive.google.com/file/d/1zTSm0ERilLESkIOZyEJxfd67zhTWzI3A/view?usp=sharing"
+              href="https://drive.google.com/file/d/12n9Ts-7aQQ_cY0R4gYCjkCu7V7bNZ6V7/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-full border border-border px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary/50"
