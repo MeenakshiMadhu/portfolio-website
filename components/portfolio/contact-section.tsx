@@ -15,9 +15,9 @@ const contactLinks = [
   },
   {
     label: "Email",
-    href: "mailto:mm14029@nyu.edu",
+    href: "mailto:meenakshimadhu00@gmail.com",
     icon: Mail,
-    description: "Drop me a line",
+    description: "Drop me a mail",
   },
 ];
 
