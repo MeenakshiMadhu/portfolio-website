@@ -14,7 +14,7 @@ const socialLinks = [
   },
   {
     label: "Email",
-    href: "mailto:mm14029@nyu.edu",
+    href: "mailto:meenakshimadhu00@gmail.com",
     icon: Mail,
   },
 ];
@@ -28,7 +28,7 @@ export function HeroSection() {
       <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:gap-16">
         {/* Photo */}
         <div className="relative shrink-0">
-          <div className="relative h-48 w-48 overflow-hidden rounded-full ring-2 ring-primary/20 ring-offset-4 ring-offset-background sm:h-56 sm:w-56 md:h-64 md:w-64">
+          <div className="relative h-56 w-56 overflow-hidden rounded-full ring-2 ring-primary/20 ring-offset-4 ring-offset-background sm:h-64 sm:w-64 md:h-80 md:w-80 lg:h-96 lg:w-96">
             <Image
               src="/images/portrait.jpeg"
               alt="Portrait photo"
@@ -63,7 +63,7 @@ export function HeroSection() {
               View My Work
             </a>
             <a
-              href="https://drive.google.com/file/d/1zTSm0ERilLESkIOZyEJxfd67zhTWzI3A/view?usp=sharing"
+              href="https://drive.google.com/file/d/1sthRJotnn46zt5n8LpHoirBJuqIOOoHo/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-full border border-border px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary/50"

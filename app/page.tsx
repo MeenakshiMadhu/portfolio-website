@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/portfolio/hero-section";
 import { AboutSection } from "@/components/portfolio/about-section";
 import { ExperienceSection } from "@/components/portfolio/experience-section";
 import { ProjectsSection } from "@/components/portfolio/projects-section";
+import { SkillsSection } from "@/components/portfolio/skills-section";
 import { ContactSection } from "@/components/portfolio/contact-section";
 import { Footer } from "@/components/portfolio/footer";
 import { Spotlight } from "@/components/portfolio/spotlight";
@@ -32,8 +33,10 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Skills */}
       <main className="mx-auto max-w-screen-lg px-5 sm:px-8 md:px-12 lg:px-20">
         <div className="flex flex-col gap-20 py-12 sm:gap-24 sm:py-16 lg:gap-28 lg:py-24">
+          <SkillsSection />
           <ProjectsSection />
         </div>
       </main>

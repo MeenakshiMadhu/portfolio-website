@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -8,23 +9,42 @@ interface ExperienceItem {
   companyUrl: string;
   description: string;
   technologies: string[];
+  logo?: string;
 }
 
 const experiences: ExperienceItem[] = [
   {
-    period: "2022 — 2024",
-    title: "Software Development Engineer",
-    company: "Citibank",
+    period: "Jul 2026 - Present",
+    title: "Software Engineer Intern",
+    company: "LOCOMeX, Inc.",
     companyUrl: "#",
+    logo: "/images/locomex-logo.jpeg",
     description:
-      "Engineered distributed ETL pipelines with Apache Spark, Java, and Oracle SQL to process high-volume financial transactions, modernized legacy batch processes into REST APIs, and drove system maintainability through code reviews and technical documentation.",
-    technologies: ["Apache Spark", "Java", "Oracle SQL", "REST APIs", "Git"],
+      "Ship full-stack features end-to-end (Python/Django) on a B2B supplier-management SaaS platform, from backend logic and APIs to role-based dashboards, in a fast-moving startup team.",
+    technologies: ["Python", "Django", "REST APIs", "PostgreSQL", "Git"],
   },
   {
-    period: "Jan 2025 -Present",
+    period: "Sep 2025 - Dec 2025",
+    title: "Software Development Intern",
+    company: "The Buku App",
+    companyUrl: "#",
+    logo: "/images/thebukuapp-logo.jpeg",
+    description:
+      "Led a 3-member team to architect, build, and release a consumer marketplace app to 100+ live users in under 2 months. Owned Stripe payments, real-time sync, and auth integrations end-to-end.",
+    technologies: [
+      "Swift",
+      "Firebase",
+      "Stripe",
+      "REST APIs",
+      "Git",
+    ],
+  },
+  {
+    period: "Jan 2025 - Present",
     title: "Student Researcher",
     company: "NYU ML for Energy Commodity Markets",
     companyUrl: "#",
+    logo: "/images/nyu-logo-2.png",
     description:
       "Designed and optimized deep learning time-series models (ESNN, RNN, LSTM, GRU, Attention) to forecast next-day oil prices from macroeconomic data, improving predictive accuracy and model stability.",
     technologies: ["Python", "TensorFlow", "PyTorch"],
@@ -34,43 +54,31 @@ const experiences: ExperienceItem[] = [
     title: "Student Researcher",
     company: "NYU Sixth Sense",
     companyUrl: "#",
+    logo: "/images/nyu-logo-2.png",
     description:
       "Working with an interdisciplinary research team at NYU to develop wearable assistive technology to promote safe autonomous mobility among the visually impaired.",
     technologies: [],
   },
   {
-    period: "Jul 2025 - Dec 2025",
-    title: "Software Development Engineer Intern",
-    company: "The Buku App",
-    companyUrl: "#",
-    description:
-      "Built and launched a production-ready iOS marketplace app using Swift and Firebase, implementing secure authentication, real-time data synchronization, and payment integration, supporting 70+ active users while maintaining a clean, scalable codebase.",
-    technologies: [
-      "Swift",
-      "Firebase",
-      "iOS Development",
-      "Stripe Payment Integration",
-      "Git",
-    ],
-  },
-  {
-    period: "May 2021 – Jul 2021",
-    title: "Software Developer Technology Analyst Intern",
+    period: "Jul 2022 - Jul 2024",
+    title: "Software Engineer",
     company: "Citibank",
     companyUrl: "#",
+    logo: "/images/citibank-logo.png",
     description:
-      "Developed and deployed Java Spring Boot microservices with a JavaScript dashboard to monitor critical financial systems in real-time, reducing issue identification time by 40% for internal teams.",
-    technologies: ["Java", "JavaScript", "REST APIs", "Microservices"],
+      "Migrated batch file-processing from Ab Initio to Apache Spark (20% faster) and legacy mainframe queues to REST microservices. Built Java parsers for financial data across 6+ enterprise clients.",
+    technologies: ["Apache Spark", "Java", "REST APIs", "Microservices", "Git"],
   },
-  // {
-  //   period: "Nov 2020 — Aug 2021",
-  //   title: "Backend Development Intern",
-  //   company: "Onfluence Ltd.",
-  //   companyUrl: "#",
-  //   description:
-  //     "Built scalable Flask APIs with MySQL for an online slot-booking platform, optimizing queries and caching to cut average response time by 90%, improving user engagement and retention.",
-  //   technologies: ["Flask", "MySQL", "REST APIs", "Docker"],
-  // },
+  {
+    period: "May 2021 - Jul 2021",
+    title: "Software Engineer Intern",
+    company: "Citibank",
+    companyUrl: "#",
+    logo: "/images/citibank-logo.png",
+    description:
+      "Built Spring Boot health-check microservices and a real-time observability dashboard for critical banking infrastructure, cutting issue-identification time by 40%.",
+    technologies: ["Java", "Spring Boot", "JavaScript", "REST APIs", "Microservices"],
+  },
 ];
 
 function ExperienceCard({ experience }: { experience: ExperienceItem }) {
@@ -85,14 +93,27 @@ function ExperienceCard({ experience }: { experience: ExperienceItem }) {
         {experience.period}
       </span>
       <div className="flex flex-col gap-2">
-        <h3 className="font-medium text-foreground leading-snug">
-          {experience.title}
-          {/* <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /> */}
-        </h3>
-        <h3 className="font-medium text-accent/60 leading-snug">
-          {experience.company}
-        </h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
+        <div className="flex items-center gap-3">
+          {experience.logo && (
+            <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-md bg-white dark:bg-background">
+              <Image
+                src={experience.logo}
+                alt={`${experience.company} logo`}
+                fill
+                className="object-contain"
+              />
+            </div>
+          )}
+          <div>
+            <h3 className="font-medium text-foreground leading-snug">
+              {experience.title}
+            </h3>
+            <h3 className="font-medium text-accent/60 leading-snug">
+              {experience.company}
+            </h3>
+          </div>
+        </div>
+        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
           {experience.description}
         </p>
         <div className="flex flex-wrap gap-2 mt-1">
@@ -119,11 +140,14 @@ export function ExperienceSection() {
       </h2>
       <div className="flex flex-col gap-2">
         {experiences.map((exp) => (
-          <ExperienceCard key={exp.period} experience={exp} />
+          <ExperienceCard
+            key={`${exp.period}-${exp.company}`}
+            experience={exp}
+          />
         ))}
       </div>
       <a
-        href="https://drive.google.com/file/d/1zTSm0ERilLESkIOZyEJxfd67zhTWzI3A/view?usp=sharing"
+        href="https://drive.google.com/file/d/1sthRJotnn46zt5n8LpHoirBJuqIOOoHo/view?usp=drive_link"
         className="group mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary"
       >
         View Full Resume

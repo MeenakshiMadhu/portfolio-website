@@ -1,4 +1,9 @@
-import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { Github, Linkedin, Mail, ArrowUpRight, Copy, Check } from "lucide-react";
+
+const EMAIL = "meenakshimadhu00@gmail.com";
 
 const contactLinks = [
   {
@@ -15,13 +20,21 @@ const contactLinks = [
   },
   {
     label: "Email",
-    href: "mailto:mm14029@nyu.edu",
+    href: `mailto:${EMAIL}`,
     icon: Mail,
     description: "Drop me a line",
   },
 ];
 
 export function ContactSection() {
+  const [copied, setCopied] = useState(false);
+
+  async function copyEmail() {
+    await navigator.clipboard.writeText(EMAIL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
+
   return (
     <section id="contact" className="scroll-mt-24">
       <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-16">
@@ -59,6 +72,24 @@ export function ContactSection() {
               <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
             </a>
           ))}
+
+          <div className="flex items-center gap-2 rounded-lg border border-border/50 bg-card/50 p-3">
+            <code className="flex-1 truncate text-sm text-muted-foreground">
+              {EMAIL}
+            </code>
+            <button
+              type="button"
+              onClick={copyEmail}
+              aria-label="Copy email address"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
+            >
+              {copied ? (
+                <Check className="h-4 w-4 text-primary" />
+              ) : (
+                <Copy className="h-4 w-4" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </section>

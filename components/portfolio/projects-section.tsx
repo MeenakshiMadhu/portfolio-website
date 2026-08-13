@@ -9,11 +9,32 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Collaborative Code Editor",
+    title: "CompassNYC",
     description:
-      "Designed and deployed a real-time collaborative code editor using CRDTs (Yjs), WebSockets, and AWS cloud infrastructure, enabling scalable, fault-tolerant multi-user editing with low-latency synchronization.",
-    technologies: ["Node.js", "Yjs", "WebSockets", "AWS", "Docker"],
+      "Built an on-device AI assistant for NYC social services at Spark Hack NVIDIA using RAG (Qwen 2.5 7B, hybrid retrieval) over NYC Open Data, with a natural-language query interface and interactive map for location services.",
+    technologies: ["Python", "Qwen 2.5 7B", "RAG", "Hybrid Retrieval"],
+    url: "https://github.com/MeenakshiMadhu/spark-hack-CompassNYC",
+  },
+  {
+    title: "scoutAI",
+    description:
+      "Built a full-stack AI job-matching platform with hybrid semantic search (OpenAI embeddings) and structured resume extraction (GPT-4o-mini), reasoning through a five-tier scaling architecture from first principles.",
+    technologies: ["Next.js", "OpenAI Embeddings", "GPT-4o-mini", "RAG"],
+    url: "https://github.com/MeenakshiMadhu/scoutAI",
+  },
+  {
+    title: "Real-Time Collaborative Code Editor",
+    description:
+      "Built a real-time collaborative coding platform with CRDTs (Yjs), WebSockets, and AWS, enabling conflict-free multi-user editing, persistent sessions, and live code execution.",
+    technologies: ["Python", "Yjs", "WebSockets", "AWS", "Docker"],
     url: "https://github.com/MeenakshiMadhu/colab-code-editor",
+  },
+  {
+    title: "WealthWise Personal Finance Tracker",
+    description:
+      "Built a full-stack budgeting app with PostgreSQL, integrating the Plaid API for live financial data and deploying to Azure via Docker and GitHub Actions CI/CD.",
+    technologies: ["Django", "PostgreSQL", "Plaid API", "Azure", "Docker"],
+    url: "#",
   },
   {
     title: "AI Restaurant Concierge Chatbot",
@@ -28,13 +49,6 @@ const projects: Project[] = [
       "Built end-to-end ML pipeline for clinical diagnosis, comparing Random Forest, XGBoost, and SVM classifiers with hyperparameter tuning (GridSearchCV) and feature importance analysis, achieving 87.9% accuracy.",
     technologies: ["Python", "Scikit-Learn", "XGBoost", "SVM", "GridSearchCV"],
     url: "https://github.com/MeenakshiMadhu/PCOS-Detection-ML-Models",
-  },
-  {
-    title: "WealthWise Personal Finance Tracker",
-    description:
-      "Architected and deployed a containerized full-stack personal finance application using Django, PostgreSQL, and Docker, implementing RESTful APIs and a mock CI/CD pipeline to enable automated testing and streamlined deployment.",
-    technologies: ["Django", "PostgreSQL", "Docker", "RESTful APIs"],
-    url: "#",
   },
 ];
 
