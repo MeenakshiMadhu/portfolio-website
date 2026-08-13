@@ -40,7 +40,7 @@ const experiences: ExperienceItem[] = [
     ],
   },
   {
-    period: "Jan 2025 - Present",
+    period: "Jan 2026 - May 2026",
     title: "Student Researcher",
     company: "NYU ML for Energy Commodity Markets",
     companyUrl: "#",
@@ -50,7 +50,7 @@ const experiences: ExperienceItem[] = [
     technologies: ["Python", "TensorFlow", "PyTorch"],
   },
   {
-    period: "Jan 2025 - Present",
+    period: "Jan 2026 - May 2026",
     title: "Student Researcher",
     company: "NYU Sixth Sense",
     companyUrl: "#",
