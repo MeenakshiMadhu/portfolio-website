@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Github, Linkedin, Mail, ArrowUpRight, Copy, Check } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowUpRight,
+  Copy,
+  Check,
+} from "lucide-react";
 
 const EMAIL = "meenakshimadhu00@gmail.com";
 
@@ -22,7 +29,7 @@ const contactLinks = [
     label: "Email",
     href: `mailto:${EMAIL}`,
     icon: Mail,
-    description: "Drop me a line",
+    description: "Drop me a mail",
   },
 ];
 

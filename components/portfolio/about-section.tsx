@@ -15,10 +15,10 @@ export function AboutSection() {
               My work sits at the intersection of backend engineering and
               full-stack development: designing APIs, data pipelines, and
               distributed systems that hold up in production. From migrating
-              Spark pipelines at Citibank to shipping Django backends at
-              LOCOMeX and payment integrations at The Buku App, I focus on how
-              data flows, where systems break, and how to build things that
-              scale cleanly.
+              Spark pipelines at Citibank to shipping Django backends at LOCOMeX
+              and payment integrations at The Buku App, I focus on how data
+              flows, where systems break, and how to build things that scale
+              cleanly.
             </p>
             <br></br>
             <p>
