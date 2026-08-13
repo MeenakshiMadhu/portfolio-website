@@ -6,7 +6,6 @@ interface ExperienceItem {
   period: string;
   title: string;
   company: string;
-  companyUrl: string;
   description: string;
   technologies: string[];
   logo?: string;
@@ -17,7 +16,6 @@ const experiences: ExperienceItem[] = [
     period: "Jul 2026 - Present",
     title: "Software Engineer Intern",
     company: "LOCOMeX, Inc.",
-    companyUrl: "#",
     logo: "/images/locomex-logo.jpeg",
     description:
       "Ship full-stack features end-to-end (Python/Django) on a B2B supplier-management SaaS platform, from backend logic and APIs to role-based dashboards, in a fast-moving startup team.",
@@ -27,7 +25,6 @@ const experiences: ExperienceItem[] = [
     period: "Sep 2025 - Dec 2025",
     title: "Software Development Intern",
     company: "The Buku App",
-    companyUrl: "#",
     logo: "/images/thebukuapp-logo.jpeg",
     description:
       "Led a 3-member team to architect, build, and release a consumer marketplace app to 100+ live users in under 2 months. Owned Stripe payments, real-time sync, and auth integrations end-to-end.",
@@ -43,7 +40,6 @@ const experiences: ExperienceItem[] = [
     period: "Jan 2026 - May 2026",
     title: "Student Researcher",
     company: "NYU ML for Energy Commodity Markets",
-    companyUrl: "#",
     logo: "/images/nyu-logo-2.png",
     description:
       "Designed and optimized deep learning time-series models (ESNN, RNN, LSTM, GRU, Attention) to forecast next-day oil prices from macroeconomic data, improving predictive accuracy and model stability.",
@@ -53,7 +49,6 @@ const experiences: ExperienceItem[] = [
     period: "Jan 2026 - May 2026",
     title: "Student Researcher",
     company: "NYU Sixth Sense",
-    companyUrl: "#",
     logo: "/images/nyu-logo-2.png",
     description:
       "Working with an interdisciplinary research team at NYU to develop wearable assistive technology to promote safe autonomous mobility among the visually impaired.",
@@ -63,7 +58,6 @@ const experiences: ExperienceItem[] = [
     period: "Jul 2022 - Jul 2024",
     title: "Software Engineer",
     company: "Citibank",
-    companyUrl: "#",
     logo: "/images/citibank-logo.png",
     description:
       "Migrated batch file-processing from Ab Initio to Apache Spark (20% faster) and legacy mainframe queues to REST microservices. Built Java parsers for financial data across 6+ enterprise clients.",
@@ -73,7 +67,6 @@ const experiences: ExperienceItem[] = [
     period: "May 2021 - Jul 2021",
     title: "Software Engineer Intern",
     company: "Citibank",
-    companyUrl: "#",
     logo: "/images/citibank-logo.png",
     description:
       "Built Spring Boot health-check microservices and a real-time observability dashboard for critical banking infrastructure, cutting issue-identification time by 40%.",
@@ -83,12 +76,7 @@ const experiences: ExperienceItem[] = [
 
 function ExperienceCard({ experience }: { experience: ExperienceItem }) {
   return (
-    <a
-      href={experience.companyUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group grid gap-4 rounded-lg p-4 -mx-4 transition-all duration-200 hover:bg-secondary/50 sm:grid-cols-[180px_1fr]"
-    >
+    <div className="group grid gap-4 rounded-lg p-4 -mx-4 transition-all duration-200 hover:bg-secondary/50 sm:grid-cols-[180px_1fr]">
       <span className="text-xs font-mono text-muted-foreground pt-1 tracking-wide">
         {experience.period}
       </span>
@@ -128,7 +116,7 @@ function ExperienceCard({ experience }: { experience: ExperienceItem }) {
           ))}
         </div>
       </div>
-    </a>
+    </div>
   );
 }
 

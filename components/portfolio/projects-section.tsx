@@ -34,7 +34,7 @@ const projects: Project[] = [
     description:
       "Built a full-stack budgeting app with PostgreSQL, integrating the Plaid API for live financial data and deploying to Azure via Docker and GitHub Actions CI/CD.",
     technologies: ["Django", "PostgreSQL", "Plaid API", "Azure", "Docker"],
-    url: "#",
+    url: "https://github.com/MeenakshiMadhu/WealthWise-Personal-Finance-Tracker",
   },
   {
     title: "AI Restaurant Concierge Chatbot",
